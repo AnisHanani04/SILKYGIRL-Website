@@ -1,0 +1,292 @@
+<html>
+<title> SILKYGIRL | Mainpage </title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Montserrat:300,400,700,900|Raleway|Satisfy" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="https://silkycosmetics.com/wp-content/themes/html5blank-stable/assets/frontend/images/favicon.ico">
+
+
+<style>
+
+.main-cointaner {
+    position: relative:
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+
+}
+
+.main-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.text-block {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    background-color: hotpink;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  
+}
+
+.text-block h4 {
+    margin: 0;
+    font-size: 30px;
+    color: white;
+}
+
+.text-block p {
+    font-size: 18px;
+}
+
+.text-block .button {
+    margin-top: 10px;
+    background-color:white;
+    color: hotpink;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.text-block .button:hover {
+    background-color: hotpink;
+    color:white;
+}
+
+.container-wrapper  {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+  
+ }
+
+#container1 {
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+
+.middle {
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+}
+
+#container1:hover .middle {
+    opacity: 1;
+}
+
+#container1:hover .image {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+ .shop-category-title {
+     text-align: center;
+     font-size: 28px;
+     color: black;
+     font-weight: bold;
+     margin: 30px 20px;
+     font-family: :'Times New Roman', serif;
+}
+
+#container1 image {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  
+}
+
+#container1 .middle {
+    position: absolute;
+    top: 50%
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease;;
+ 
+}
+
+
+.middle .text {
+    background-color: hotpink;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+  #myAudio {
+    display: none;
+    visibility: hidden;
+}
+
+ .play-icon {
+    font-size: 50px;
+    cursor: pointer;
+    color: #FF69B4;       
+}
+
+</style>
+</head>
+
+<body>
+ 
+<!-- Navigation -->
+<div class="top-nav" style="margin: 0;">
+  <div class="container">
+    <a href="index.html" class="brand" style="color: #ee048d;">SILKYGIRL</a>
+    <form>
+      <input type="text" name="search" placeholder="Search..">
+    </form>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="parallax.html">About Us</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Products</a>
+        <div class="dropdown-content">
+          <a href="eyeproduct.html">Eyes</a>
+          <a href="lip.html">Lips</a>
+          <a href="face.html">Face</a>
+          <a href="nail.html">Nails</a>
+          <a href="haircolor.html">Hair Color</a>
+          <a href="fragrance.html">Fragrance</a>
+        </div>
+      </li>
+      <li><a href="videos.html" target="_blank">Videos</a></li>
+	  <li><a href="cart.html" class="notification"><i class="fa fa-shopping-cart" style="font-size:20px;"></i>
+	  <span class="badge">0</span></a></a></li>
+	  <li><a href="register.html"><i class="material-icons" style="font-size:24px;">&#xe7ff;</i></a></li>
+	 <li><i class="fa fa-play-circle play-icon" onclick="playSound()" style="font-size:32px;"></i>
+
+    <!-- Hidden Audio -->
+    <audio id="myAudio">
+	  <source src="Dreaming.ogg" type="audio/ogg">
+      <source src="Dreaming.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function playSound() {
+            const audio = document.getElementById("myAudio");
+            audio.play();
+        }
+    </script>
+	</li>
+	</ul>
+  </div>
+</div>
+
+<div class="main-container">
+
+<img src="mainpage.jpg" alt="first image" > 
+
+<div class="text-block">
+  <h4>HELLO PRETTY ♡ </h4>
+ <p> Let's visit our store </p>
+ <a href="face.html" class="button">Shop Now! </a>
+</div>
+</div>
+ 
+<div class="shop-category-title">SHOP BY CATEGORY </div>
+
+
+<div class="container-wrapper">
+  <div id="container1">
+    <img src="lip.jpg" alt="lippies" class="image" >
+    <div class="middle">
+      <div class="text"><a href="lip.html">Lips</a></div>
+    </div>
+  </div>
+
+  <div id="container1">
+    <img src="eye.jpg" alt="eyes" class="image">
+    <div class="middle">
+      <div class="text"><a href="eyeproduct.html">Eyes</a></div>
+    </div>
+  </div>
+
+  <div id="container1">
+    <img src="face.webp" alt="faces" class="image">
+    <div class="middle">
+      <div class="text"><a href="face.html">Face</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-row-padding w3-padding-32">
+  <div class="w3-row">
+    <div class="w3-quarter w3-container">
+      <h3><b>HELP & FAQ</b></h3>
+      <p><a href="sitemap.html">Sitemap</a></p>
+    </div>
+<div class="w3-half w3-container">
+  <h3><b>VISIT US</b></h3>
+	<div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+	
+    <!-- Website -->
+    <a href="https://silkycosmetics.com/" target="_blank" title="Visit Website">
+      <img src="world-wide-web.png" alt="Website icon" width="20" height="20">
+    </a>
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/SILKYGIRL.Cosmetics" target="_blank" title="Visit Facebook">
+      <img src="facebook.png" alt="Facebook icon" width="20" height="20">
+    </a>
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/silkygirlcosmetics" target="_blank" title="Visit Instagram">
+      <img src="instagram.png" alt="Instagram icon" width="20" height="20">
+    </a>
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/user/silkygirlcosmetics" target="_blank" title="Visit YouTube">
+      <img src="youtube.png" alt="YouTube icon" width="25" height="25">
+    </a>
+    <!-- Twitter -->
+    <a href="https://x.com/SILKYGIRLovers?mx=2" target="_blank" title="Visit Twitter">
+      <img src="twitter.png" alt="Twitter icon" width="20" height="20">
+    </a>
+</div></div>
+    <div class="w3-quarter w3-container">
+      <h3><b>ABOUT SILKYGIRL</b></h3>
+      <p><a href="privacypolicy.html">Privacy Policy</a></p>
+      <p><a href="parallax.html#contactus">Contact Us</a></p>
+      <p><a href="locateus.html">Location</a></p>
+    </div>
+  </div>
+    <p style="font-size: 12px;">Copyright &#169; Radiant Glow's. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
+
