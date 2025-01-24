@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<title>SILKYGIRL | Videos</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="description" content="Explore videos and products by SILKYGIRL. From makeup tips to fragrance insights, we have it all for you.">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Montserrat:300,400,700,900|Raleway|Satisfy" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="https://silkycosmetics.com/wp-content/themes/html5blank-stable/assets/frontend/images/favicon.ico">
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+h4 {
+  font-size: 20px;
+  text-align: center;
+  }
+
+p {
+  font-size: 12px;
+  text-align: center;
+  }
+  
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<div class="top-nav" style="margin: 0;">
+  <div class="container">
+    <a href="index.html" class="brand" style="color: #ee048d;">SILKYGIRL</a>
+    <form>
+      <input type="text" name="search" placeholder="Search..">
+    </form>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="parallax.html">About Us</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Products</a>
+        <div class="dropdown-content">
+          <a href="eyeproduct.html">Eyes</a>
+          <a href="lip.html">Lips</a>
+          <a href="face.html">Face</a>
+          <a href="nail.html">Nails</a>
+          <a href="haircolor.html">Hair Color</a>
+          <a href="fragrance.html">Fragrance</a>
+        </div>
+      </li>
+      <li><a href="videos.html" target="_blank">Videos</a></li>
+	  <li><a href="cart.html" class="notification"><i class="fa fa-shopping-cart" style="font-size:20px;"></i>
+	  <span class="badge">0</span></a></a></li>
+	  <li><a href="register.html"><i class="material-icons" style="font-size:24px;">&#xe7ff;</i></a></li>
+    </ul>
+  </div>
+</div>
+
+<center><header style = "background-color : #FBEEF1; color : #EE048D; font-size : 70px; font-family : Bernard Mt COndensed; padding : 30px; margin-top:100px;"><i>Videos</i></header>
+</center>
+
+<center><hr style="height: 2px; width: 75%; color:gray;background-color:gray"></center>
+
+<div id="myBtnContainer" style="padding: 40px;">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('2013')"> 2013</button>
+  <button class="btn" onclick="filterSelection('2014')"> 2014</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row" style="padding: 40px;">
+  <div class="column 2013">
+    <div class="content">
+	<a href="https://www.youtube.com/embed/9v5AL8vgUx0">
+      <img src="https://img.youtube.com/vi/9v5AL8vgUx0/hqdefault.jpg" 
+	  alt="Makeup Travel Buddies!" style="width:100%"></a>
+	   <h4>5 December 2013</h4>
+      <p>The Spy (SIN)</p>
+    </div>
+  </div>
+  <div class="column 2013">
+    <div class="content">
+	<a href="https://www.youtube.com/embed/y2rwKruAMxs">
+    <img src="https://img.youtube.com/vi/y2rwKruAMxs/hqdefault.jpg" alt="Makeup Travel Buddies!" style="width:100%"></a>
+      <h4>5 December 2013</h4>
+      <p>Big Hat (SIN)</p>
+    </div>
+  </div>
+  <div class="column 2014">
+    <div class="content">
+	<a href="https://www.youtube.com/embed/H1XAsFz51mI">
+    <img src="https://img.youtube.com/vi/H1XAsFz51mI/hqdefault.jpg" alt="Makeup Travel Buddies!" style="width:100%"></a>
+      <h4>27 January 2014</h4>
+      <p>Fruity Scentsation EDT TVC</p>
+    </div>
+  </div>
+  
+  <div class="column 2014">
+    <div class="content">
+	<a href="https://www.youtube.com/embed/qgBn8efuB80">
+      <img src="https://img.youtube.com/vi/qgBn8efuB80/hqdefault.jpg" alt="Makeup Travel Buddies!" style="width:100%"></a>
+      <h4>5 February 2014</h4>
+      <p>SILKYGIRL Moisture Balm Lipcolor TVC (Eng)</p>
+    </div>
+  </div>
+  <div class="column 2014">
+    <div class="content">
+	<a href="https://www.youtube.com/embed/FDCcygrxe5M">
+    <img src="https://img.youtube.com/vi/FDCcygrxe5M/hqdefault.jpg" alt="Makeup Travel Buddies!" style="width:100%"></a>
+      <h4>6 February 2014</h4>
+      <p>SILKYGIRL Moisture Balm Lipcolor TVC (Mand)</p>
+    </div>
+  </div>
+  <div class="column 2014">
+    <div class="content">
+	<a href="https://www.youtube.com/embed/k0Cq2Lyl9xE">
+    <img src="https://img.youtube.com/vi/k0Cq2Lyl9xE/hqdefault.jpg" alt="Makeup Travel Buddies!" style="width:100%"></a>
+      <h4>27 February 2014</h4>
+      <p>SILKYGIRL Exotic Flowers Roll-On Perfume</p>
+    </div>
+  </div>
+
+  <div class="column 2014">
+    <div class="content">
+	<a href="https://www.youtube.com/embed/j5ZJ0UoKuzU">
+      <img src="https://img.youtube.com/vi/j5ZJ0UoKuzU/hqdefault.jpg" alt="Makeup Travel Buddies!" style="width:100%"></a>
+      <h4>9 April 2014</h4>
+      <p>SILKYGIRL Magic BB Water Gel TVC (The Office)</p>
+    </div>
+  </div>
+  <div class="column 2014">
+    <div class="content">
+	<a href="https://www.youtube.com/embed/UXNAbsIIyeg">
+    <img src="https://img.youtube.com/vi/UXNAbsIIyeg/hqdefault.jpg" alt="Makeup Travel Buddies!" style="width:100%"></a>
+      <h4>1 May 2014</h4>
+      <p>SILKYGIRL Colors EDT TVC (Paper Cut)</p>
+    </div>
+  </div>
+  <div class="column 2014">
+    <div class="content">
+	<a href="https://www.youtube.com/embed/_53vzY9fP44">
+    <img src="https://img.youtube.com/vi/_53vzY9fP44/hqdefault.jpg" alt="Makeup Travel Buddies!" style="width:100%"></a>
+      <h4>10 June 2014</h4>
+      <p>SG Magic BB Oil-Control Pure Fresh Powder (MAL)</p>
+    </div>
+  </div>
+
+  
+<!-- END GRID -->
+</div>
+
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+<button class="open-button" onclick="openForm()"><img src="comment.png" alt="Chat icon" style="width: 25px; height: 25px;" title="Chat with us!"></button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <img src="comment.png" alt="Chat icon" style="width: 15px; height: 15px;">
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+ <button type="submit" class="btn" onclick="showAlert(event)">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+		function openForm() {
+			document.getElementById("myForm").style.display = "block";
+		}
+
+		function closeForm() {
+			document.getElementById("myForm").style.display = "none";
+		}
+
+		function showAlert(event) {
+            event.preventDefault(); // Prevent the form from submitting and reloading the page
+            alert('Your message delivered!');
+        }
+</script>
+
+
+<!-- Footer -->
+<footer class="w3-row-padding w3-padding-32">
+  <div class="w3-row">
+    <div class="w3-quarter w3-container">
+      <h3><b>HELP & FAQ</b></h3>
+      <p><a href="sitemap.html">Sitemap</a></p>
+    </div>
+<div class="w3-half w3-container">
+  <h3><b>VISIT US</b></h3>
+	<div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+	
+    <!-- Website -->
+    <a href="https://silkycosmetics.com/" target="_blank" title="Visit Website">
+      <img src="world-wide-web.png" alt="Website icon" width="20" height="20">
+    </a>
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/SILKYGIRL.Cosmetics" target="_blank" title="Visit Facebook">
+      <img src="facebook.png" alt="Facebook icon" width="20" height="20">
+    </a>
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/silkygirlcosmetics" target="_blank" title="Visit Instagram">
+      <img src="instagram.png" alt="Instagram icon" width="20" height="20">
+    </a>
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/user/silkygirlcosmetics" target="_blank" title="Visit YouTube">
+      <img src="youtube.png" alt="YouTube icon" width="25" height="25">
+    </a>
+    <!-- Twitter -->
+    <a href="https://x.com/SILKYGIRLovers?mx=2" target="_blank" title="Visit Twitter">
+      <img src="twitter.png" alt="Twitter icon" width="20" height="20">
+    </a>
+</div></div>
+    <div class="w3-quarter w3-container">
+      <h3><b>ABOUT SILKYGIRL</b></h3>
+      <p><a href="privacypolicy.html">Privacy Policy</a></p>
+      <p><a href="parallax.html#contactus">Contact Us</a></p>
+      <p><a href="locateus.html">Location</a></p>
+    </div>
+  </div>
+    <p style="font-size: 12px;">Copyright &#169; Radiant Glow's. All Rights Reserved.</p>
+
+</footer>
+</body>
+</html>

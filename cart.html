@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="https://silkycosmetics.com/wp-content/themes/html5blank-stable/assets/frontend/images/favicon.ico">
+	
+    <title>Your Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+			margin: 0;
+			background-color:#FBEEF1 ;
+	
+        }
+        .cart {
+            margin-top: 20px;
+            border-top: 2px solid #000;
+            padding-top: 10px;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+        }
+        .cart-item button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .cart-item button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <center><header style = "background-color : #FBEEF1; color : #EE048D; font-size : 70px; font-family : Bernard Mt COndensed; padding : 30px; margin-top:50px;"><i>Your Cart</i></header></center>
+
+
+    <div class="cart" style="margin:10px 200px;">
+        <h2>Cart Items</h2>
+        <div id="cartItems"></div>
+        <p><strong>Total: RM<span id="cartTotal">0</span></strong></p>
+        <button onclick="clearCart()">Clear Cart</button>
+		<button onclick="goToCheckout()">Checkout</button>
+    </div>
+
+    <script>
+	 function goToCheckout() {
+        // Redirect to checkout.html
+        window.location.href = 'checkoutform.html';
+    }
+	
+        // Load cart from localStorage
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let total = 0;
+
+        function renderCart() {
+            const cartItemsDiv = document.getElementById('cartItems');
+            const cartTotalSpan = document.getElementById('cartTotal');
+
+            // Clear the cart display
+            cartItemsDiv.innerHTML = '';
+
+            // Render each cart item
+            cart.forEach((item, index) => {
+                const cartItemDiv = document.createElement('div');
+                cartItemDiv.className = 'cart-item';
+                cartItemDiv.innerHTML = `
+                    <span>${item.name} - RM${item.price}</span>
+                    <button onclick="removeFromCart(${index})">x</button>
+                `;
+                cartItemsDiv.appendChild(cartItemDiv);
+
+                // Update the total
+                total += item.price;
+            });
+
+            // Update the total display
+            cartTotalSpan.textContent = total.toFixed(2);
+        }
+
+        function removeFromCart(index) {
+            // Remove the product from the cart array
+            total -= cart[index].price; // Subtract the product's price from the total
+            cart.splice(index, 1); // Remove the product at the specified index
+
+            // Save the updated cart to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Re-render the cart
+            renderCart();
+        }
+
+        function clearCart() {
+            // Clear the cart in localStorage
+            localStorage.removeItem('cart');
+
+            // Reload the page to clear the display
+            location.reload();
+        }
+
+        // Initial render
+        renderCart();
+    </script>
+</body>
+</html>
